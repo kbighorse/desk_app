@@ -1,4 +1,10 @@
 %h1 Filters
 
-- @filters.each do |filter|
-	%p= link_to filter.name, filter_path(filter)
+%table{ class: "filters table table-striped" }
+  %thead
+    %th
+      Name
+  %tbody
+    - @filters.each do |filter|
+      %tr
+        %td= link_to filter.name, filter_path(filter)
