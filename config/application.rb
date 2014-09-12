@@ -61,6 +61,8 @@ module DeskApp
     config.generators do |g|
       g.test_framework :rspec
     end
+
+    config.assets.initialize_on_precompile = false
   end
 
 end
