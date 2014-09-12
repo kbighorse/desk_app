@@ -1,0 +1,4 @@
+%h1 Filters
+
+- @filters.each do |filter|
+	%p= link_to filter.name, filter_path(filter)
