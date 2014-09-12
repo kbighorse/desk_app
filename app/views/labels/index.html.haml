@@ -1,2 +1,13 @@
-%h1 Labels#index
-%p Find me in app/views/labels/index.html.haml
+%h1 Labels
+
+%table{ class: "labels table table-striped" }
+  %thead
+    %th
+      Name
+  %tbody
+    - @labels.each do |label|
+      %tr
+        %td
+          = label.name
+%p
+  = link_to "New Label", new_label_path

@@ -25,7 +25,29 @@
     </div>
   </div>
   <div class="container">
+    <% if flash[:warn].present? %>
+    <div class="row">
+      <div class="span16">
+        <div class="alert-message warning">
+          <p><%= flash[:warn] %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+    <% if flash[:notice].present? %>
+    <div class="row">
+      <div class="span16">
+        <div class="alert-message success">
+          <p><%= flash[:notice] %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
 		<%= yield %>
+    <footer>
+      <p>&copy; Bighorse 2014</p>
+    </footer>
   </div>
 
 </body>

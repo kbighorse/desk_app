@@ -1,8 +1,6 @@
 DeskApp::Application.routes.draw do
-  get "labels/index"
-
   resources :filters, only: [:index, :show]
-  resources :labels, only: [:index]
+  resources :labels, only: [:index, :new, :create]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,32 @@
+.row-fluid
+  .form-inline.form-horizontal
+    = form_tag(labels_path) do
+      .control-group
+        .control-label
+          = label_tag :name
+        .controls
+          = text_field_tag :name
+      .control-group
+        .control-label
+          = label_tag :description
+        .controls
+          = text_area_tag :description
+      - [:case, :macro, :article].each do |type|
+        .control-group
+          .control-label
+            = label_tag type
+          .controls
+            = check_box_tag "types[]", type, false
+      .control-group
+        .control-label
+          = label_tag :color
+        .controls
+          = select_tag :color, options_for_select(%w(default blue))
+      .control-group
+        .control-label
+          = label_tag :enabled
+        .controls
+          = check_box_tag :enabled
+      .control-group
+        .controls
+          = submit_tag 'Submit', class: "btn btn-large btn-primary"
