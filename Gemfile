@@ -5,7 +5,7 @@ gem 'rails', '3.2.19'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -44,3 +44,4 @@ gem "haml", ">= 3.1.6"
 gem "haml-rails", ">= 0.3.4", :group => :development
 gem "bootstrap-sass", ">= 2.0.4.0"
 gem "will_paginate", ">= 3.0.3"
+gem 'desk'
