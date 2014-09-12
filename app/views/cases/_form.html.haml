@@ -1,0 +1,11 @@
+.row-fluid
+  .form-inline.form-horizontal
+    = form_tag("/cases/#{params[:id]}", method: :put) do
+      .control-group
+        .control-label
+          Label
+        .controls
+          = select_tag 'label_id', options_from_collection_for_select(@labels, "id", "name")
+      .control-group
+        .controls
+          = submit_tag 'Submit', class: "btn btn-large btn-primary"

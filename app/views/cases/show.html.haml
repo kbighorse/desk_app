@@ -1,0 +1,18 @@
+%h1= @case.subject
+.row-fluid
+  Status:
+  = @case.status
+.row-fluid
+  Type:
+  = @case.type
+.row-fluid
+  Blurb:
+  = @case.blurb
+.row-fluid
+  Labels:
+  - @case.labels.entries.each do |label|
+    = succeed ',' do
+      = label.name if label.name
+.row-fluid
+  = link_to 'Add Label', edit_case_path(params[:id]), class: 'btn'
+%br/

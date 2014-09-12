@@ -1,29 +1,29 @@
 %h1 Filter #{params[:id]}
 %p
-	= @filter.name
-	|
-	= @filter.sort_field
-	|
-	= @filter.sort_direction
-	%br/
+  = @filter.name
+  |
+  = @filter.sort_field
+  |
+  = @filter.sort_direction
+  %br/
 
 %h3 Cases
 - @cases.each do |c|
-	.row-fluid
-		subject:
-		= c.subject
-		%br/
-		status:
-		= c.status
-		|
-		type:
-		= c.type
-		%br/
-		blurb:
-		= c.blurb
-		%br/
-		Labels:
-		- c.labels.entries.each do |label|
-			= label.name if label.name
-		%br/
-		%br/
+  .row-fluid
+    subject:
+    = link_to c.subject, case_path(c)
+    %br/
+    status:
+    = c.status
+    |
+    type:
+    = c.type
+    %br/
+    blurb:
+    = c.blurb
+    %br/
+    Labels:
+    - c.labels.entries.each do |label|
+      = label.name if label.name
+    %br/
+    %br/
