@@ -28,6 +28,7 @@ GEM
     activesupport (3.2.19)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
+    addressable (2.3.6)
     arel (3.0.3)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
@@ -39,21 +40,15 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
-    desk (1.0.3)
-      faraday (~> 0.9.0)
-      faraday_middleware (~> 0.9.0)
-      hashie (~> 2.1)
-      multi_json (~> 1.6)
-      multi_xml (~> 0.5)
-      pony (~> 1.1)
-      simple_oauth (~> 0.2.0)
+    desk_api (0.6.1)
+      addressable (>= 2.3, < 2.4)
+      faraday (>= 0.8, < 1.0)
+      simple_oauth (>= 0.1, < 0.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.1)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.9.1)
-      faraday (>= 0.7.4, < 0.10)
     haml (4.0.5)
       tilt
     haml-rails (0.4)
@@ -61,7 +56,6 @@ GEM
       activesupport (>= 3.1, < 4.1)
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
-    hashie (2.1.2)
     hike (1.2.3)
     i18n (0.6.11)
     journey (1.0.4)
@@ -74,12 +68,9 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     multi_json (1.10.1)
-    multi_xml (0.5.5)
     multipart-post (2.0.0)
     pg (0.17.1)
     polyglot (0.3.5)
-    pony (1.11)
-      mail (>= 2.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -142,7 +133,6 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     will_paginate (3.0.7)
-    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -150,7 +140,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (>= 2.0.4.0)
   coffee-rails (~> 3.2.1)
-  desk
+  desk_api
   haml (>= 3.1.6)
   haml-rails (>= 0.3.4)
   jquery-rails
@@ -160,4 +150,3 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
   will_paginate (>= 3.0.3)
-  yajl-ruby
