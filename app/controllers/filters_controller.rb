@@ -4,7 +4,9 @@ class FiltersController < ApplicationController
   end
 
   def show
-  	@filter = DeskApi.filters.find params.fetch(:id)
+  	filter_id = params.fetch(:id)
+  	@filter = DeskApi.filters.find filter_id
+  	@cases = DeskApi.cases(filter_id: filter_id).embed(:label).entries
   end
 
 end
